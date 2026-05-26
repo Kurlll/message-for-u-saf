@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>for safira</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, pink, lightcoral);
+      display: flex;
+      flex-direction: column;
+
+  
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    header{
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    
+    }
+
+    nav{
+    margin-left: 20px;
+    
+    
+    }
+    
+    
+    
+
+    /* tombol awal */
+    .open-btn {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    /* note */
+    .note {
+      align-items: center;
+      justify-content: center;
+      display: none;
+      position: absolute;
+      width: 500px;
+      padding: 20px;
+      background: #fff9c4;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+      text-align: left;
+      
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  
+
+<!-- tombol buka -->
+<button class="open-btn" onclick="buka()">dibuka yaa... 💌</button>
+
+<!-- note -->
+<div class="note" id="note">
+  hi thanks for seeing this massage, i just wanna show my last act of love for you, safira, i made this for you from my deepest heart <br><br>
+  i’m really sorry for the times i hurt you, for my mistakes, and for the pain i caused. i wish i had been better for you. you never deserved any of that, and i carry that regret with me. <br>
+  even so, my love for you doesn’t just disappear. it’s still here, and i think a part of it always will be. you’ve touched my heart in such a beautiful way, and i’ll always be thankful for every moment we shared. <br>
+  thank you for all the laughter, the late-night conversations, and for making me feel truly seen. you brought so much light into my life. <br>
+  if one day you think of me, i hope you remember the good parts. and please know that you were loved deeply, honestly, and with everything i had. <br>
+  padahal our third chance tuh part yang paling dekatnya kita..tapi gw malah buang dan sia sia in itu semua. tapi bukan chance ini aja kayanya, chance-chance sebelumnya juga gw buang, and i act like a dumbest person. and maybe im a dumbest person u've ever met? <br>
+  this is my last gift to you… my heart, in its most honest form. even though u hope that our path must not cross again, i still make this message for u. after that all, i hope u find someone who can treat u better then i did. thanks and sorry for everything. <br> <br>
+  i love you, saff. <br>
+  always.
+  
+</div>
+
+<!-- audio -->
+<audio id="music" loop>
+  <source src="Budi Doremi - Ada Untukmu (Official Music Video).mp3" type="audio/mpeg">
+</audio>
+
+<!-- hearts -->
+<div class="hearts" id="hearts"></div>
+
+<script>
+function buka() {
+  // tampilkan note
+  document.getElementById("note").style.display = "block";
+
+  // sembunyiin tombol
+  document.querySelector(".open-btn").style.display = "none";
+
+  // play musik
+  document.getElementById("music").play();
+
+  // mulai love jatuh
+  setInterval(() => {
+    const love = document.createElement("span");
+    love.innerHTML = "💖";
+    love.style.left = Math.random() * 100 + "vw";
+    document.getElementById("hearts").appendChild(love);
+
+    setTimeout(() => {
+      love.remove();
+    }, 5000);
+  }, 300);
+}
+</script>
+<header>
+<p>woiiwoii, lo tau kan gw suka coidng, plss bgt appreciate what i made... <br>
+
+  BUT SORRY KALO FREAK BGTT WOII, MALU GW 
+</p>
+
+</header>
+<link rel="stylesheet" href="second.css">
+</body>
+</html>
